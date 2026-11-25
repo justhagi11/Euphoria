@@ -22,14 +22,6 @@ Requires: AVX2 instruction set cpu, DirectX 12 GPU.
 
 **Euphoria** is a translation layer for the Great Trade Algo 6 game.
 
-## Preview
-
-<div align="center">
-
-<img src="https://placehold.co/1000x500/0b2118/8dbfa0?text=Euphoria+Preview" width="100%" alt="Euphoria Preview" />
-
-</div>
-
 ## TODO
 
 - Boot to menu
