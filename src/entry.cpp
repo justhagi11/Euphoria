@@ -1,7 +1,20 @@
-#include <cstdio>
+#include <euphoria/host/host.hpp>
+#include <euphoria/log/log.hpp>
 
-int main()
+#include <exception>
+#include <string>
+
+#include <windows.h>
+
+int WINAPI wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 {
-    std::puts("Euphoria");
-    return 0;
+    try {
+        return euphoria::host::run();
+    } catch (const std::exception& error) {
+        euphoria::log::error(std::string("host: fatal exception: ") + error.what());
+        return 1;
+    } catch (...) {
+        euphoria::log::error("host: fatal unknown exception");
+        return 1;
+    }
 }
